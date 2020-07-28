@@ -16,7 +16,7 @@ public class GenInfo {
     /**
      * 作者
      */
-    private String author = "YLJUN";
+    private String author = "wangxin";
 
     /**
      * 数据库连接
@@ -36,16 +36,16 @@ public class GenInfo {
     /**
      * controller service 包名
      */
-    private String controllerPackageName = "com.xx.xx.user.rest.controller";
-    private String servicePackageName = "com.xx.xx.user.rest.service";
-    private String serviceImplPackageName = "com.xx.xx.user.rest.service.impl";
+    private String controllerPackageName = ".controller";
+    private String servicePackageName = ".service";
+    private String serviceImplPackageName;
 
     /**
      * dao包名
      */
-    private String entityPackageName = "com.xx.xx.user.rest.model.pojo";
-    private String mapperPackageName = "com.xx.xx.user.rest.dao.mapper";
-    private String xmlPackageName = "com.xx.xx.user.rest.dao.mapping";
+    private String entityPackageName = ".entity";
+    private String mapperPackageName = ".mapper";
+    private String xmlPackageName = "mapper";
 
     /**
      * 表前缀
@@ -62,12 +62,26 @@ public class GenInfo {
      */
     private String modelName;
 
+    /**
+     * 根包名
+     */
+    private String packageName;
+
+    public String getPackageName() {
+        return packageName;
+    }
+
+    public GenInfo setPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
+
     public String getProjectPath() {
         return projectPath + CONSTRUCT;
     }
 
     public String getServiceImplPackageName() {
-        return servicePackageName + ".impl";
+        return packageName + servicePackageName + ".impl";
     }
 
     public String getDbName() {
@@ -103,19 +117,19 @@ public class GenInfo {
     }
 
     public String getControllerPackageName() {
-        return controllerPackageName;
+        return packageName + controllerPackageName;
     }
 
     public String getServicePackageName() {
-        return servicePackageName;
+        return packageName + servicePackageName;
     }
 
     public String getEntityPackageName() {
-        return entityPackageName;
+        return packageName + entityPackageName;
     }
 
     public String getMapperPackageName() {
-        return mapperPackageName;
+        return packageName + mapperPackageName;
     }
 
     public String getXmlPackageName() {

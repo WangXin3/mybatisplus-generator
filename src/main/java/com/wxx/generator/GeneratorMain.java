@@ -20,21 +20,9 @@ public class GeneratorMain {
                 .setModelName("order")
                 // 作者
                 .setAuthor("wangxin")
+                .setPackageName("com.wxx.testmybatisplus")
                 //设置模块路径
-                .setProjectPath("C:\\Users\\10758\\Desktop\\test")
-                //设置controller包名
-                .setControllerPackageName("com.wxx.gulimall.controller")
-                //设置service包名
-                .setServicePackageName("com.wxx.gulimall.service")
-                //设置dao包名
-                .setEntityPackageName("com.wxx.gulimall.entity")
-                .setMapperPackageName("com.wxx.gulimall.mapper")
-                // mapper.xml存放路径 不用改
-                .setXmlPackageName("mapper")
-                //设置是否生成controller
-                .setGenController(true)
-                //设置是否生成service
-                .setGenService(true)
+                .setProjectPath("C:\\Users\\10758\\Desktop\\test-mybatisplus")
                 //设置是否覆盖已存在文件
                 .setOverrideExistFile(false)
                 //生成
